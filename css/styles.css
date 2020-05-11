@@ -1,0 +1,150 @@
+/* -- Variables -- */
+:root{
+  --clr-background: #a0c9c3;
+  --clr-black: #000000;
+  --clr-text: #313131;
+  --clr-red: #ed3a24;
+  --clr-hover: #584950;
+  --clr-button: #d0d1b9;
+  --width-background: 600px;
+  --height-background: calc(var(--width-background) * 0.817);
+  --width-vinyl: calc(var(--width-background) * 0.642);
+  --height-needle: calc(var(--width-background) * 0.5);
+  font-size: 16px;
+}
+/* -- Font -- */
+@font-face {
+  font-family: "Number text";
+  src: url('../assets/fonts/ZCOOLQingKeHuangYou.ttf');
+}
+/* -- Globals -- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: var(--clr-background);
+  font-family: "Number Text";
+}
+a{
+  text-decoration: none;
+  color: var(--clr-black);
+}
+.vinyl__btn{
+  text-align: center;
+  background-color: var(--clr-button);
+  padding: .6em .8em .8em;
+  border: none;
+  color: var(--clr-text);
+  margin-right: .5em;
+  border-radius: 0.313em;
+  font-size: calc(var(--width-background) * 0.025);
+  outline: none;
+  cursor: pointer;
+  box-shadow: inset 0 -0.2em rgba(0,0,0,.2);
+  transition: transform .3s ease;
+  will-change: transform;
+}
+.vinyl__btn:last-child{
+  margin-right: 0;
+}
+.vinyl__btn:active{
+  transform: scale(.95);
+}
+.disabled{
+  transform: scale(.9);
+  opacity: .8;
+  box-shadow: none;
+  cursor: default;
+}
+.vinyl__btn.disabled:active{
+  transform: scale(.9);
+}
+/* -- Vinyl -- */
+.vinyl{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.vinyl__title{
+  font-size: 2.81rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1875rem;
+  text-align: center;
+  margin: 0 0 1.25rem;
+}
+.vinyl__content {
+  width: var(--width-background);
+  height: var(--height-background);
+  position: relative;
+  background-size: contain;
+  background-image: url('../assets/img/background.png');
+}
+.vinyl__image{
+  width: var(--width-vinyl);
+  position: absolute;
+  top: calc(var(--width-vinyl) * 0.158);
+  left: calc(var(--width-vinyl) * 0.203);
+}
+.needle__image {
+  position: absolute;
+  height: var(--height-needle);
+  top: calc(var(--height-needle) * 0.15);
+  right: calc(var(--height-needle) * 0.23);
+  transform-origin: center calc(var(--height-needle) * 0.23);
+}
+/* -- Vinyl Buttons -- */
+.vinyl__buttons {
+  position: absolute;
+  bottom: calc(var(--width-background) * 0.053);
+}
+.vinyl__buttons-left {
+  left: calc(var(--width-background) * 0.027);
+  padding-left: calc(var(--width-background) * 0.027);
+}
+.vinyl__buttons-right {
+  right: calc(var(--width-background) * 0.027);
+  padding-right: calc(var(--width-background) * 0.027);
+}
+.vinyl__speed {
+  font-size: calc(var(--width-background) * 0.04);
+  width: 2em;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 .667em;
+  border-radius: .417em;
+  color: var(--clr-red);
+  background-color: var(--clr-text);
+}
+/* --- Vinyl Content Icon --- */
+.vinyl__icon {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.88rem;
+}
+.vinyl__icon p {
+  margin: 0 0 1.88rem;
+}
+.vinyl__icon a {
+  font-size: 30px;
+  display: inline-block;
+  margin-right: 1em;
+}
+.vinyl__icon a:last-child {
+  margin: 0;
+}
+.vinyl__icon a:hover {
+  color: var(--clr-hover);
+}

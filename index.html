@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vinyl Animation</title>
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="vinyl">
+      <h1 class="vinyl__title">Vinyl Animation</h1>
+      <!-- ----- Vinyl Content ----- -->
+      <section class="vinyl__content">
+        <img src="./assets/img/vinyl.png" class="vinyl__image" alt="vinyl image" />
+        <img src="./assets/img/needle.png" class="needle__image" alt="needle image" />
+        <!-- ----- Vinyl Content Buttons left ----- -->
+        <div class="vinyl__buttons vinyl__buttons-left">
+          <p class="vinyl__speed" id="speed">0.0</p>
+          <button class="vinyl__btn icon-backward disabled" id="backward"></button>
+          <button class="vinyl__btn icon-forward disabled" id="forward"></button>
+        </div>
+        <!-- ----- Vinyl Content Buttons right ----- -->
+        <div class="vinyl__buttons vinyl__buttons-right">
+          <button class="vinyl__btn icon-play" id="main"></button>
+          <button class="vinyl__btn icon-stop disabled" id="stop"></button>
+          <button class="vinyl__btn icon-undo disabled" id="reverse"></button>
+        </div>
+      </section>
+      <!-- Vinyl Content Icon -->
+      <section class="vinyl__icon">
+        <p style="font-size: 20px">@mauroquinteros</p>
+        <div>
+          <a href="#"><span class="icon-github"></span></a>
+          <a href="#"><span class="icon-twitter"></span></a>
+          <a href="#"><span class="icon-instagram"></span></a>
+        </div>
+      </section>
+    </div>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
